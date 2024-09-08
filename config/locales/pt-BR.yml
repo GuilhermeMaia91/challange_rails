@@ -1,0 +1,37 @@
+---
+pt-BR:
+  activerecord:
+    exceptions:
+      not_found: "Registro não encontrado."
+    errors:
+      messages:
+        record_invalid: "Informações inválidas: %{errors}"
+      models:
+        country:
+          attributes:
+            name:
+              blank: "não pode ser vazio"
+            name_short:
+              blank: "não pode ser vazio"
+        user:
+          attributes:
+            name:
+              blank: "não pode ser vazio"
+            email:
+              blank: "não pode ser vazio"
+            password:
+              blank: "não pode ser vazio"
+  devise:
+    failure:
+      invalid: "{\"tag\":\"Unauthenticate\",\"error\":\"Usuário e senha inválido.\"}"
+      unauthenticated: "{\"tag\":\"Unauthenticate\",\"error\":\"Usuário e senha inválido.\"}"
+  success:
+    user_login_successfull: "Usuário logado com sucesso!"
+    user_register_successfull: "Usuário registrado com sucesso!"
+  errors:
+    messages:
+      unavailable: "Serviço indisponivel no momento."
+      country_already_exist: "Já existe um pais cadastrado com o mesmo nome e apelido."
+      country_not_found: "País não encontrado."
+      session_expired: "Sessão inválida."
+      user_not_registered: "Não foi possível registrar o usuário."
