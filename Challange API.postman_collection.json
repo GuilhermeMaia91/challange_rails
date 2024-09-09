@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "1241d3a9-09ea-46b0-8e71-fd0e61b18e03",
+		"name": "Challange API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "525826"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"email\": \"guilhermemaiasilva@hotmail.com\",\n        \"password\": \"mudar123\",\n        \"name\": \"Guilherme Maia\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"email\": \"guilhermemaiasilva@hotmail.com\",\n        \"password\": \"mudar123\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar País",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMTgyYzNkMC00ZDVkLTQ2ODEtOWY2Mi0yNDZhODRjNjIxOTgiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI1ODEyMDY4LCJleHAiOjE3MjU4MTM4Njh9.QqHCAAmAWcEI3SkLjkj_D_Xlu-MSWo4TMd-YhcKw2f4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Brasil\",\n    \"name_short\": \"BR\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/countries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Países",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMTgyYzNkMC00ZDVkLTQ2ODEtOWY2Mi0yNDZhODRjNjIxOTgiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI1ODE1NTYxLCJleHAiOjE3MjU4MTczNjF9.raOb3OH4PphJWFmHrC-xJBDA3rQylLjFindnkxxWo-0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/countries?name=Bra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bra"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar País",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMTgyYzNkMC00ZDVkLTQ2ODEtOWY2Mi0yNDZhODRjNjIxOTgiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI1ODE4NDYwLCJleHAiOjE3MjU4MjAyNjB9.lNjjMbW_c3lFRjX8zhKIRik0d_SuUJem9GB_nJwXJqY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/countries?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar País",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMTgyYzNkMC00ZDVkLTQ2ODEtOWY2Mi0yNDZhODRjNjIxOTgiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI1ODE4NDYwLCJleHAiOjE3MjU4MjAyNjB9.lNjjMbW_c3lFRjX8zhKIRik0d_SuUJem9GB_nJwXJqY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Equador\",\n    \"name_short\": \"EQ\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/countries?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar País",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMTgyYzNkMC00ZDVkLTQ2ODEtOWY2Mi0yNDZhODRjNjIxOTgiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI1ODE4NDYwLCJleHAiOjE3MjU4MjAyNjB9.lNjjMbW_c3lFRjX8zhKIRik0d_SuUJem9GB_nJwXJqY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/countries?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Detalhes do País",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMTgyYzNkMC00ZDVkLTQ2ODEtOWY2Mi0yNDZhODRjNjIxOTgiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI1ODEyMDY4LCJleHAiOjE3MjU4MTM4Njh9.QqHCAAmAWcEI3SkLjkj_D_Xlu-MSWo4TMd-YhcKw2f4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"observation\": \"Brasil é lindo\",\n    \"picture\": \"http://fotos_brasil.com.br/item1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/country_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"country_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Detalhes do País",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMTgyYzNkMC00ZDVkLTQ2ODEtOWY2Mi0yNDZhODRjNjIxOTgiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI1ODEyMDY4LCJleHAiOjE3MjU4MTM4Njh9.QqHCAAmAWcEI3SkLjkj_D_Xlu-MSWo4TMd-YhcKw2f4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/country_details?name=Bra&observation=lindo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"country_details"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Bra"
+						},
+						{
+							"key": "observation",
+							"value": "lindo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Detalhes do País",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMTgyYzNkMC00ZDVkLTQ2ODEtOWY2Mi0yNDZhODRjNjIxOTgiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI1ODEyMDY4LCJleHAiOjE3MjU4MTM4Njh9.QqHCAAmAWcEI3SkLjkj_D_Xlu-MSWo4TMd-YhcKw2f4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/country_details?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"country_details"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Detalhes do País",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMTgyYzNkMC00ZDVkLTQ2ODEtOWY2Mi0yNDZhODRjNjIxOTgiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI1ODEyMDY4LCJleHAiOjE3MjU4MTM4Njh9.QqHCAAmAWcEI3SkLjkj_D_Xlu-MSWo4TMd-YhcKw2f4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"observation\": \"bla bla bla\",\n    \"picture\": \"http://nova_foto.com.br\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/country_details?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"country_details"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar detalhes do País",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjMTgyYzNkMC00ZDVkLTQ2ODEtOWY2Mi0yNDZhODRjNjIxOTgiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI1ODEyMDY4LCJleHAiOjE3MjU4MTM4Njh9.QqHCAAmAWcEI3SkLjkj_D_Xlu-MSWo4TMd-YhcKw2f4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/country_details?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"country_details"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
